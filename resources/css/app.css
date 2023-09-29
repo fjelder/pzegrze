@@ -5,3 +5,7 @@
 [x-cloak] {
     display: none;
 }
+
+.mfcard .icon svg {
+    @apply w-10 h-10;
+}

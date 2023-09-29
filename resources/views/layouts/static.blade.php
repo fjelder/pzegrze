@@ -32,7 +32,7 @@
 </head>
 
 <body class="antialiased">
-
+  @livewire('navigation-menu')
   <x-banner />
   <div
     class="relative sm:flex sm:justify-center sm:items-centerx min-h-screen bg-dots-darker bg-center bg-gray-100 selection:bg-red-500 selection:text-white">
