@@ -24,3 +24,6 @@
 .mfinput-error {
     @apply text-sm text-red-400;
 }
+.mftest {
+    display: flex;
+}
