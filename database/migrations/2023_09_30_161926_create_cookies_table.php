@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('spotkania_czwartkowe', function (Blueprint $table) {
+        Schema::create('cookies', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('fullName');
             $table->string('bring');
-            $table->tinyInteger('function');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('spotkania_czwartkowe');
+        Schema::dropIfExists('cookies');
     }
 };

@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SpotkaniaCzwartkowe extends Model
+class Cookies extends Model
 {
     use HasFactory;
-    protected $table = 'spotkania_czwartkowe';
+    protected $fillable = [
+        'fullName', 'bring'
+    ];
 }
