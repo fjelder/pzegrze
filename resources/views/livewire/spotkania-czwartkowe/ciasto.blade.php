@@ -49,10 +49,10 @@
     <h2 class="mt-6 text-md font-semibold text-gray-900 underline mb-4">Już się zgłosili</h2>
   </div>
   @foreach($person as $x)
-  <div class="text-gray-500 leading-relaxed flex items-center" x-data="{ visible: false }">
-    <input id="default-checkbox" type="checkbox" value=""
+  <div class="text-gray-500 leading-relaxed flex items-center" x-data="{visible: false}" :id="$id('checkbox')">
+    <input id="{{$x->id}}" type="checkbox" value="{{$x->id}}"
       class="mr-4 w-4 h-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-      x-on:click="visible = ! visible">
+      x-id="['delete-checkbox']" x-model="visible">
     {{$loop->iteration}}.
     {{$x->fullName }} -
     {{$x->bring}}
@@ -65,6 +65,8 @@
     </button>
   </div>
   @endforeach
+
+  <p class="text-xs text-gray-500 mt-4">Zaznacz, żeby usunać.</p>
   @else
 
   <div>
