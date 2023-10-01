@@ -7,8 +7,7 @@
     </svg>
   </x-slot>
   <x-slot name="description">
-    Przygotowanie salki można rozpocząć od godziny 17:00. W razie zamknięcia łącznika klucze dostępne będą u Pana
-    Kościelnego.
+
   </x-slot>
   <h2 class="mt-6 mb-4 font-semibold text-gray-900 underline text-md">Zapisz się!</h2>
 
