@@ -37,7 +37,7 @@
 
   @if(count($person))
   <div>
-    <h2 class="mt-6 mb-4 font-semibold text-gray-900 underline text-md">Już się zgłosili</h2>
+    <h2 class="mt-6 mb-4 font-semibold text-gray-900 underline text-md">Już się zgłosili:</h2>
   </div>
   @foreach($person as $x)
   <div class="flex items-center leading-relaxed text-gray-500" x-data="{visible: false}" :id="$id('checkbox')">
