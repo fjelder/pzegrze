@@ -1,32 +1,46 @@
-<x-card title="Ciasto, ciastka, coś na stół" id="ciasto">
+<x-card title="Przygotowanie salki przed spotkaniem">
   <x-slot name="icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-      <g data-name="47-Cookie">
-        <path
-          d="M30.15 8.53a1 1 0 0 0-.89-.53H26V6a1 1 0 0 0-1-1h-2V2.26a1 1 0 0 0-.6-.92A16 16 0 1 0 32 16a16 16 0 0 0-1.85-7.47zM16 30a14 14 0 1 1 5-27.07V5a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h2.65A13.81 13.81 0 0 1 30 16a14 14 0 0 1-14 14z" />
-        <path
-          d="M14 9a3 3 0 1 0-3 3 3 3 0 0 0 3-3zm-3 1a1 1 0 1 1 1-1 1 1 0 0 1-1 1zM15 20a3 3 0 1 0 3 3 3 3 0 0 0-3-3zm0 4a1 1 0 1 1 1-1 1 1 0 0 1-1 1z" />
-        <circle cx="25" cy="19" r="2" />
-        <circle cx="7" cy="18" r="2" />
-        <path d="M19 10a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2z" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-10 h-10">
+      <defs>
+        <style>
+        .cls-1 {
+          fill: #201602
+        }
+
+        </style>
+      </defs>
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="layer_1-2" data-name="layer 1">
+          <path class="cls-1"
+            d="M17 11c-2.76 0-5-2.69-5-6a4.68 4.68 0 0 1 5-5 4.68 4.68 0 0 1 5 5c0 3.31-2.24 6-5 6zm0-9a2.72 2.72 0 0 0-3 3c0 2.21 1.35 4 3 4s3-1.79 3-4a2.72 2.72 0 0 0-3-3z" />
+          <path class="cls-1" d="M9 23H7v-8.42a5 5 0 0 1 4.45-5L16.89 9l.22 2-5.44.61a3 3 0 0 0-2.67 3z" />
+          <path class="cls-1"
+            d="M11 15h2v7h-2zM21 15h2v6h-2zM31 11c-2.76 0-5-2.69-5-6a4.68 4.68 0 0 1 5-5 4.68 4.68 0 0 1 5 5c0 3.31-2.24 6-5 6zm0-9a2.72 2.72 0 0 0-3 3c0 2.21 1.35 4 3 4s3-1.79 3-4a2.72 2.72 0 0 0-3-3z" />
+          <path class="cls-1" d="M23 21h-2v-6.42a5 5 0 0 1 4.45-5L30.89 9l.22 2-5.44.61a3 3 0 0 0-2.67 3z" />
+          <path class="cls-1"
+            d="M25 15h2v6h-2zM41 23h-2v-8.42a3 3 0 0 0-2.67-3L30.89 11l.22-2 5.44.6a5 5 0 0 1 4.45 5z" />
+          <path class="cls-1" d="M35 15h2v7h-2z" />
+          <path class="cls-1"
+            d="M24 36c-11.63 0-24-2.8-24-8s12.37-8 24-8 24 2.8 24 8-12.37 8-24 8zm0-14c-13.63 0-22 3.49-22 6s8.37 6 22 6 22-3.49 22-6-8.37-6-22-6z" />
+          <path class="cls-1"
+            d="M24 48c-6.26 0-13-1.46-13-4.65v-9.26h2v9.26c0 .79 3.74 2.65 11 2.65s11-1.86 11-2.65v-9.26h2v9.26C37 46.54 30.26 48 24 48z" />
+        </g>
       </g>
     </svg>
   </x-slot>
-
+  <x-slot name="description">
+    Przygotowanie salki można rozpocząć od godziny 17:00. W razie zamknięcia łącznika klucze dostępne będą u Pana
+    Kościelnego.
+  </x-slot>
   <h2 class="mt-6 mb-4 font-semibold text-gray-900 underline text-md">Zapisz się!</h2>
 
-  <div class="grid w-full gap-6 mb-6 md:grid-cols-2">
-    <div>
-      <label for="name" class="mflabel">Imię i nazwisko</label>
-      <input type="text" id="name" wire:model="fullName" class="mfinput" autocomplete="name">
-      <div class="mfinput-error">@error('fullName') {{ $message }} @enderror</div>
-    </div>
-    <div>
-      <label for="bring" class="mflabel">Przyniosę</label>
-      <input type="text" id="bring" wire:model="bring" class="mfinput">
-      <div class="mfinput-error">@error('bring') {{ $message }} @enderror</div>
-    </div>
+  <div class="mb-6">
+    <label for="name" class="mflabel">Imię i nazwisko</label>
+    <input type="text" id="name" wire:model="fullName" class="mfinput" autocomplete="name">
+    <div class="mfinput-error">@error('fullName') {{ $message }} @enderror</div>
   </div>
+
+
   <button wire:click="save" class="col-span-2 mr-3 mfbutton">Zapisz</button>
   <div wire:loading>
     Zapisuję...
@@ -54,8 +68,7 @@
       class="w-4 h-4 mr-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
       x-id="['delete-checkbox']" x-model="visible">
     {{$loop->iteration}}.
-    {{$x->fullName }} -
-    {{$x->bring}}
+    {{$x->fullName }}
     <button class="mx-4 text-sm text-gray-400 hover:text-red-400" x-show="visible" wire:click="delete({{$x->id}})">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="w-5 h-5">
@@ -76,6 +89,4 @@
   </div>
 
   @endif
-
-
 </x-card>
