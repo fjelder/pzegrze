@@ -40,7 +40,7 @@
     <div class="max-w-7xl mx-auto p-6 lg:p-8 w-full">
       <div class="flex justify-center">
 
-        <div class="flex items-center">
+        <a href="{{route('home')}}" class="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492"
             xml:space="preserve" class="h-24 w-auto bg-gray-100 border rounded-full p-1">
             <path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FF2D20"
@@ -67,7 +67,7 @@
             </g>
           </svg>
           <p class="ml-10 font-semibold text-xl logo-font text-gray-700">Wspólnota Parafialna </p>
-        </div>
+        </a>
       </div>
 
       <div class="mt-16">
