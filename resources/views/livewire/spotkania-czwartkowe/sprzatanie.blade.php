@@ -42,7 +42,7 @@
   @foreach($person as $x)
   <div class="flex items-center leading-relaxed text-gray-500" x-data="{visible: false}" :id="$id('checkbox')">
     <input id="{{$x->id}}" type="checkbox" value="{{$x->id}}"
-      class="w-4 h-4 mr-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+      class="w-4 h-4 mr-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500 focus:ring-2"
       x-id="['delete-checkbox']" x-model="visible">
     {{$loop->iteration}}.
     {{$x->fullName }}
